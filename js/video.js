@@ -51,8 +51,8 @@ document.querySelector("#mute").addEventListener("click", function() {
 document.querySelector("#slider").addEventListener("input", function() {
     var volumeLevel = this.value / 100; // Convert the slider value to a decimal
     video.volume = volumeLevel; // Set the video volume
-    document.querySelector("#volume").textContent = this.value; // Update the volume information display
-    console.log("Volume is: " + volumeLevel.toFixed(2)); // Log the volume to the console, formatted to two decimal places
+    document.querySelector("#volume").textContent = this.value + "%"; // Update the volume information display
+    console.log("Volume is: " + volumeLevel.toFixed(2) * 100 + "%"); // Log the volume to the console, formatted to two decimal places
 });
 
 document.querySelector("#vintage").addEventListener("click", function() {
